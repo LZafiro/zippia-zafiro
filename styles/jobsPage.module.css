@@ -42,6 +42,12 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 500px) {
+  .card {
+    width: auto;
+  }
+}
+
 .cardTitle {
   color: #333;
   font-family: Open Sans;
@@ -82,8 +88,61 @@
   line-height: 22px;
 }
 
-@media screen and (max-width: 500px) {
-  .card {
-    width: auto;
-  }
+.actionButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.customCheckboxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 150px;
+  cursor: pointer;
+  color: #333;
+  background-color: #fff;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.customCheckboxContainerSelected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 150px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #3174ee;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.companyNameSearch {
+  width: 240px;
+  height: 44px;
+  text-indent: 10px;
+  padding: 0;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #d8dee2;
+}
+
+.companyNameSearch:focus {
+  outline: none;
 }
