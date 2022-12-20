@@ -1,7 +1,7 @@
 import React from "react";
 import { GetServerSideProps } from "next";
 import styles from "../../../styles/jobsPage.module.css";
-import Card from "./card";
+import Card from "../../../components/card";
 
 const apiURL = "https://www.zippia.com/api/jobs/";
 
