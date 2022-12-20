@@ -1,0 +1,107 @@
+.wrapper {
+  width: 100%;
+  height: 68px;
+  background-color: #2c2c2c;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25px;
+  padding: 0 15px;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
+
+.jobSearchBar {
+  width: 240px;
+  height: 44px;
+  text-indent: 10px;
+  padding: 0;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  border-right: 1px solid #d8dee2;
+}
+
+.locationSearchBar {
+  width: 184px;
+  height: 44px;
+  text-indent: 10px;
+  padding: 0;
+  border: none;
+}
+
+.searchButton {
+  width: 44px;
+  height: 44px;
+  background-color: #ff6000;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: #ce5204;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options a {
+  cursor: pointer;
+  white-space: nowrap;
+  color: #aaaaaa;
+  font-size: 14px;
+  font-family: brandon-grotesque, sans-serif;
+  padding-right: 14px;
+}
+
+.options a:hover {
+  transition: all 0.2s ease-in-out;
+  color: #ffffff;
+}
+
+.smallScreenOptions {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallScreenOptions a {
+  color: #aaaaaa;
+  font-size: 14px;
+  padding-right: 10px;
+  font-family: brandon-grotesque, sans-serif;
+}
+
+.smallScreenOptions img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 980px) {
+  .searchBar {
+    display: none;
+  }
+  .options {
+    display: none;
+  }
+  .smallScreenOptions {
+    display: flex;
+  }
+}

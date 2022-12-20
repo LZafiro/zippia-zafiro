@@ -1,0 +1,70 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.cardsContainer {
+  height: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 380px;
+  max-height: 250px;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -moz-box-shadow: 0 5px 5px rgba(220, 220, 220, 0.75);
+  -webkit-box-shadow: 0 5px 5px rgba(220, 220, 220, 0.75);
+  box-shadow: 0 5px 5px rgba(220, 220, 220, 0.75);
+  cursor: pointer;
+}
+
+.cardTitle {
+  color: #333;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  max-width: 310px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 10px;
+}
+
+.cardCompanyName {
+  color: #333;
+  font-family: Open Sans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  opacity: 0.8;
+  padding-bottom: 20px;
+}
+
+.cardJobDescriptionContainer {
+  overflow: auto;
+  height: 200px;
+  text-overflow: ellipsis;
+  opacity: 0.8;
+}
+
+.cardJobDescription {
+  color: #333;
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 22px;
+}
