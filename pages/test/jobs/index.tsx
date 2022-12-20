@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { GetServerSideProps } from "next";
 import styles from "../../../styles/jobsPage.module.css";
-import Card from "../../../components/card";
+import Card from "../../../src/components/card";
+import Job from "../../../src/models/job";
 
 const apiURL = "https://www.zippia.com/api/jobs/";
-
-export interface Job {
-  jobTitle: string;
-  companyName: string;
-  jobDescription: string;
-  postingDate: string;
-}
 
 export default function Jobs({ jobs }: { jobs: Job[] }): JSX.Element {
   // We store the jobs in a state variable to be able to filter them
@@ -20,9 +14,10 @@ export default function Jobs({ jobs }: { jobs: Job[] }): JSX.Element {
 
   useEffect(() => {
     if (filterLast7Days) {
+      // We reset the company name filter, that way we can use one filter at a time
       setCompanyNameFilter("");
       // We filter the jobs by last 7 days
-      const filteredJobs = jobs.filter((job) => {
+      const filteredJobs = jobs.filter((job: Job) => {
         const postingDate = new Date(job.postingDate);
         const today = new Date();
         const diffTime = Math.abs(today.getTime() - postingDate.getTime());
@@ -37,8 +32,9 @@ export default function Jobs({ jobs }: { jobs: Job[] }): JSX.Element {
 
   useEffect(() => {
     if (companyNameFilter) {
+      // We reset the 7 days filter, that way we can use one filter at a time
       setFilterLast7Days(false);
-      const filteredData = jobs.filter((value) =>
+      const filteredData = jobs.filter((value: Job) =>
         value.companyName
           .toLowerCase()
           .includes(companyNameFilter.toLowerCase())

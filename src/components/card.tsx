@@ -1,6 +1,6 @@
 import ReactHtmlParser from "react-html-parser";
-import styles from "../styles/jobsPage.module.css";
-import { Job } from "../pages/test/jobs/index";
+import styles from "../../styles/jobsPage.module.css";
+import Job from "../models/job";
 
 export default function Card({ job }: { job: Job }): JSX.Element {
   return (
