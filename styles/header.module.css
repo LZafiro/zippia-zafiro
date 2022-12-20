@@ -7,7 +7,7 @@
 .content {
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 0 25px;
   padding: 0 15px;
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  padding: 0 60px;
 }
 
 .searchBar input:focus {
@@ -95,8 +95,12 @@
 }
 
 @media screen and (max-width: 980px) {
+  .content {
+    justify-content: space-between;
+  }
   .searchBar {
     display: none;
+    padding: 0;
   }
   .options {
     display: none;
