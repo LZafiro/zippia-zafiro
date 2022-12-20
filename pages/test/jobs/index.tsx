@@ -1,10 +1,16 @@
 import React from "react";
 import { GetServerSideProps } from "next";
 import styles from "../../../styles/jobsPage.module.css";
-import { Job } from "./models";
 import Card from "./card";
 
 const apiURL = "https://www.zippia.com/api/jobs/";
+
+export interface Job {
+  jobTitle: string;
+  companyName: string;
+  jobDescription: string;
+  postingDate: string;
+}
 
 export default function Jobs({ jobs }: { jobs: Job[] }): JSX.Element {
   return (
